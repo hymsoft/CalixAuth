@@ -1,0 +1,38 @@
+{
+    "common": {
+        "generate": "Générer",
+        "copy": "Copier",
+        "settings": "Paramètres",
+        "history": "Historique",
+        "language": "Langue",
+        "copied_to_clipboard": "Copié dans le presse-papiers"
+    },
+    "dashboard": {
+        "title": "CalixAuth",
+        "subtitle": "Gestionnaire de Mots de Passe Éphémères"
+    },
+    "settings": {
+        "title": "Paramètres",
+        "length": "Longueur",
+        "uppercase": "Majuscules",
+        "numbers": "Nombres",
+        "symbols": "Symboles",
+        "rate_us": "Évaluez-nous",
+        "support": "Support",
+        "buy_coffee": "Offre-moi un café",
+        "theme": "Thème",
+        "theme_system": "Système",
+        "theme_light": "Clair",
+        "theme_dark": "Sombre"
+    },
+    "history": {
+        "empty": "Vos mots de passe générés apparaîtront ici.",
+        "delete_confirm": "Effacer tout l'historique ?",
+        "cancel": "Annuler",
+        "delete": "Effacer",
+        "delete_all": "Tout Effacer"
+    },
+    "security": {
+        "clipboard_cleared": "Presse-papiers Effacé"
+    }
+}

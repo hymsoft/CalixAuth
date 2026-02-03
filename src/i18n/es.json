@@ -1,0 +1,38 @@
+{
+    "common": {
+        "generate": "Generar",
+        "copy": "Copiar",
+        "settings": "Ajustes",
+        "history": "Historial",
+        "language": "Idioma",
+        "copied_to_clipboard": "Copiado al portapapeles"
+    },
+    "dashboard": {
+        "title": "CalixAuth",
+        "subtitle": "Generador de Claves Efímeras"
+    },
+    "settings": {
+        "title": "Ajustes",
+        "length": "Longitud",
+        "uppercase": "Mayúsculas",
+        "numbers": "Números",
+        "symbols": "Símbolos",
+        "rate_us": "Califícanos",
+        "support": "Soporte",
+        "buy_coffee": "Regálame un café",
+        "theme": "Tema",
+        "theme_system": "Sistema",
+        "theme_light": "Claro",
+        "theme_dark": "Oscuro"
+    },
+    "history": {
+        "empty": "Tus contraseñas generadas aparecerán aquí.",
+        "delete_confirm": "¿Borrar todo el historial?",
+        "cancel": "Cancelar",
+        "delete": "Borrar",
+        "delete_all": "Borrar Todo"
+    },
+    "security": {
+        "clipboard_cleared": "Portapapeles saneado por seguridad"
+    }
+}

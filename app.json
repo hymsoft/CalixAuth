@@ -1,0 +1,42 @@
+{
+  "expo": {
+    "name": "CalixAuth",
+    "slug": "CalixAuth",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#121B2E"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.hymsoft.calixauth",
+      "buildNumber": "1.0.0"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-foreground.png",
+        "backgroundColor": "#121B2E"
+      },
+      "edgeToEdgeEnabled": true,
+      "versionCode": 26013001,
+      "package": "com.hymsoft.calixauth"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router"
+    ],
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "a886cc9b-324d-4a7b-a8e9-79ef5c9ad3ca"
+      }
+    }
+  }
+}
