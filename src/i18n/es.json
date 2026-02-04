@@ -23,7 +23,11 @@
         "theme": "Tema",
         "theme_system": "Sistema",
         "theme_light": "Claro",
-        "theme_dark": "Oscuro"
+        "theme_dark": "Oscuro",
+        "min": "min. {{val}}",
+        "max": "max. {{val}}",
+        "donation_title": "¡Nuestra cafetera está en mantenimiento! ☕🔧",
+        "donation_message": "Estamos calibrando los granos de código para que puedas invitarnos ese café muy pronto. ¡Gracias por el entusiasmo, vuelve en la próxima actualización!"
     },
     "history": {
         "empty": "Tus contraseñas generadas aparecerán aquí.",

@@ -39,6 +39,10 @@ export const PasswordSettings = () => {
           accessibilityRole="adjustable"
           accessibilityValue={{ min: 8, max: 32, now: length }}
         />
+        <View style={styles.sliderLabels}>
+          <Text style={styles.sliderLabelText}>{t("settings.min", { val: 8 })}</Text>
+          <Text style={styles.sliderLabelText}>{t("settings.max", { val: 32 })}</Text>
+        </View>
       </View>
 
       {/* Fila de Switches (Horizontal) */}
@@ -125,5 +129,16 @@ const styles = StyleSheet.create({
     color: Colors.text.main,
     textAlign: "center",
     fontWeight: "500",
+  },
+  sliderLabels: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    paddingHorizontal: 4,
+    marginTop: -8,
+  },
+  sliderLabelText: {
+    fontSize: 12,
+    color: Colors.text.muted,
+    fontWeight: "600",
   },
 });

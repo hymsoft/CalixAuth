@@ -23,7 +23,11 @@
         "theme": "Thème",
         "theme_system": "Système",
         "theme_light": "Clair",
-        "theme_dark": "Sombre"
+        "theme_dark": "Sombre",
+        "min": "min. {{val}}",
+        "max": "max. {{val}}",
+        "donation_title": "Notre machine à café est en maintenance ! ☕🔧",
+        "donation_message": "Nous calibrons les grains de code pour que vous puissiez nous offrir ce café très bientôt. Merci pour votre enthousiasme, revenez lors de la prochaine mise à jour !"
     },
     "history": {
         "empty": "Vos mots de passe générés apparaîtront ici.",

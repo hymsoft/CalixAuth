@@ -1,5 +1,20 @@
 # Changelog - CalixAuth
 
+## [1.0.0] - 2026-02-03
+
+> [!IMPORTANT]
+> **Lanzamiento de Producción**: Ingreso oficial al repositorio de producción. Esta versión consolida todas las mejoras de la fase de auditoría y pulido final.
+
+### Added
+- **Repositorio Oficial**: Transición al flujo de producción oficial bajo la versión 1.0.0.
+- **Internacionalización (i18n)**: Soporte completo para etiquetas de slider (min/max) en todos los idiomas (ES, EN, FR, PT).
+
+### Fixed
+- **UI/UX (Pulido Final)**:
+  - Mejora de visibilidad de la versión en el menú de ajustes con color `muted` para Modo Oscuro.
+  - Agregadas etiquetas visuales "min. 8" y "max. 32" al slider de longitud para mayor claridad.
+  - Reemplazo del flujo de donación por un mensaje ameno y descriptivo de mantenimiento de cafetera ("Invítame un café" próximamente).
+
 ## [1.0.59] - 2026-02-03
 
 > [!IMPORTANT]

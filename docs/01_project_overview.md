@@ -4,7 +4,7 @@
 
 * **Empresa:** HyM Soft
 * **Líder de Proyecto:** Hugo Antonio Segura
-* **Versión:** 1.0.59 (Cierre de Fase de Auditoría)
+* **Versión:** 1.0.0 (Lanzamiento de Producción)
 * **Estado:** Estable / Producción-Ready
 
 ---

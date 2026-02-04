@@ -8,6 +8,7 @@ import {
     useColorScheme,
     Linking,
     Platform,
+    Alert,
 } from "react-native";
 import { useConfigStore } from "../store/useConfigStore";
 import { useTranslation } from "react-i18next";
@@ -86,13 +87,12 @@ export const SettingsMenu = () => {
         }
     };
 
-    const handleBuyCoffee = async () => {
-        const url = "https://www.buymeacoffee.com/hymsoft";
-        try {
-            await Linking.openURL(url);
-        } catch (error) {
-            if (__DEV__) console.error("Error opening Coffee:", error);
-        }
+    const handleBuyCoffee = () => {
+        Alert.alert(
+            t("settings.donation_title"),
+            t("settings.donation_message"),
+            [{ text: "OK", onPress: () => Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success) }]
+        );
     };
 
     return (
@@ -192,7 +192,7 @@ export const SettingsMenu = () => {
                                 </TouchableOpacity>
 
                                 <View style={styles.versionContainer}>
-                                    <Text style={styles.versionText}>V{appVersion}</Text>
+                                    <Text style={[styles.versionText, { color: colors.text.muted }]}>V{appVersion}</Text>
                                 </View>
                             </View>
                         ) : viewMode === "languages" ? (

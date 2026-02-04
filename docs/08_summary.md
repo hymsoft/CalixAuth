@@ -210,4 +210,4 @@ Script `scripts/set-version.js` ejecuta en pre-build para actualizar automática
 
 ## 📍 Estado Actual del Proyecto
 
-**CalixAuth** ha superado una auditoría técnica profunda, alcanzando un nivel de madurez **Producción-Ready**. El proyecto no solo es funcional y estéticamente superior, sino que ahora cuenta con una base de código sólida, testeada y resiliente ante errores. La versión actual es **1.0.59**.
+**CalixAuth** ha superado una auditoría técnica profunda, alcanzando un nivel de madurez **Producción-Ready**. El proyecto no solo es funcional y estéticamente superior, sino que ahora cuenta con una base de código sólida, testeada y resiliente ante errores. La versión actual es **1.0.0**.

@@ -23,7 +23,11 @@
         "theme": "Theme",
         "theme_system": "System",
         "theme_light": "Light",
-        "theme_dark": "Dark"
+        "theme_dark": "Dark",
+        "min": "min. {{val}}",
+        "max": "max. {{val}}",
+        "donation_title": "Our coffee machine is under maintenance! ☕🔧",
+        "donation_message": "We are calibrating the code beans so you can buy us that coffee very soon. Thanks for the enthusiasm, come back in the next update!"
     },
     "history": {
         "empty": "Your generated passwords will appear here.",
