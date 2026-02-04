@@ -27,7 +27,16 @@
         "min": "min. {{val}}",
         "max": "max. {{val}}",
         "donation_title": "Nossa cafeteira está em manutenção! ☕🔧",
-        "donation_message": "Estamos calibrando os grãos de código para que você possa nos pagar aquele café muito em breve. Obrigado pelo entusiasmo, volte na próxima atualização!"
+        "donation_message": "Estamos calibrando os grãos de código para que você possa nos pagar aquele café muito em breve. Obrigado pelo entusiasmo, volte na próxima atualização!",
+        "about": "Sobre",
+        "rate_title": "Em breve na Store! ⭐",
+        "rate_message": "Estamos polindo os últimos detalhes para enviar o aplicativo. Muito em breve você poderá nos dar essas 5 estrelas. Obrigado pelo apoio!"
+    },
+    "about": {
+        "developed_by": "Desenvolvido por",
+        "purpose": "Filosofia",
+        "purpose_desc": "Usar e Esquecer",
+        "rights": "Todos os direitos reservados"
     },
     "history": {
         "empty": "Suas senhas geradas aparecerão aqui.",

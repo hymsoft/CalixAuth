@@ -27,7 +27,16 @@
         "min": "min. {{val}}",
         "max": "max. {{val}}",
         "donation_title": "Notre machine à café est en maintenance ! ☕🔧",
-        "donation_message": "Nous calibrons les grains de code pour que vous puissiez nous offrir ce café très bientôt. Merci pour votre enthousiasme, revenez lors de la prochaine mise à jour !"
+        "donation_message": "Nous calibrons les grains de code pour que vous puissiez nous offrir ce café très bientôt. Merci pour votre enthousiasme, revenez lors de la prochaine mise à jour !",
+        "about": "À propos",
+        "rate_title": "Bientôt sur le Store ! ⭐",
+        "rate_message": "Nous peaufinons les derniers détails pour télécharger l'application. Très bientôt, vous pourrez nous donner ces 5 étoiles. Merci pour le soutien !"
+    },
+    "about": {
+        "developed_by": "Développé par",
+        "purpose": "Philosophie",
+        "purpose_desc": "Utiliser et Oublier",
+        "rights": "Tous droits réservés"
     },
     "history": {
         "empty": "Vos mots de passe générés apparaîtront ici.",

@@ -27,7 +27,16 @@
         "min": "min. {{val}}",
         "max": "max. {{val}}",
         "donation_title": "¡Nuestra cafetera está en mantenimiento! ☕🔧",
-        "donation_message": "Estamos calibrando los granos de código para que puedas invitarnos ese café muy pronto. ¡Gracias por el entusiasmo, vuelve en la próxima actualización!"
+        "donation_message": "Estamos calibrando los granos de código para que puedas invitarnos ese café muy pronto. ¡Gracias por el entusiasmo, vuelve en la próxima actualización!",
+        "about": "Acerca de",
+        "rate_title": "¡Próximamente en la Store! ⭐",
+        "rate_message": "Estamos puliendo los últimos detalles para subir la app. Muy pronto podrás darnos esas 5 estrellas. ¡Gracias por el apoyo!"
+    },
+    "about": {
+        "developed_by": "Desarrollado por",
+        "purpose": "Filosofía",
+        "purpose_desc": "Usar y Olvidar",
+        "rights": "Todos los derechos reservados"
     },
     "history": {
         "empty": "Tus contraseñas generadas aparecerán aquí.",

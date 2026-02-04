@@ -27,7 +27,16 @@
         "min": "min. {{val}}",
         "max": "max. {{val}}",
         "donation_title": "Our coffee machine is under maintenance! ☕🔧",
-        "donation_message": "We are calibrating the code beans so you can buy us that coffee very soon. Thanks for the enthusiasm, come back in the next update!"
+        "donation_message": "We are calibrating the code beans so you can buy us that coffee very soon. Thanks for the enthusiasm, come back in the next update!",
+        "about": "About",
+        "rate_title": "Coming soon to the Store! ⭐",
+        "rate_message": "We are polishing the last details to upload the app. Very soon you will be able to give us those 5 stars. Thanks for the support!"
+    },
+    "about": {
+        "developed_by": "Developed by",
+        "purpose": "Philosophy",
+        "purpose_desc": "Use and Forget",
+        "rights": "All rights reserved"
     },
     "history": {
         "empty": "Your generated passwords will appear here.",

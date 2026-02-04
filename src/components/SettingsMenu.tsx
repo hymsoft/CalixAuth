@@ -9,6 +9,7 @@ import {
     Linking,
     Platform,
     Alert,
+    Image,
 } from "react-native";
 import { useConfigStore } from "../store/useConfigStore";
 import { useTranslation } from "react-i18next";
@@ -39,7 +40,7 @@ const languages = [
 export const SettingsMenu = () => {
     const { t } = useTranslation();
     const [visible, setVisible] = useState(false);
-    const [viewMode, setViewMode] = useState<"main" | "languages" | "themes">("main");
+    const [viewMode, setViewMode] = useState<"main" | "languages" | "themes" | "about">("main");
 
     const { setLanguage, language: currentLang, theme, setTheme } = useConfigStore();
     const systemColorScheme = useColorScheme();
@@ -63,23 +64,16 @@ export const SettingsMenu = () => {
         i18n.changeLanguage(code);
     };
 
-    const handleRateUs = async () => {
-        // URL de ejemplo, se debería reemplazar por la de la Play Store real
-        const url = Platform.OS === "android"
-            ? "market://details?id=com.hymsoft.calixauth"
-            : "https://apps.apple.com/app/idXXXXXXXXX";
-        try {
-            const supported = await Linking.canOpenURL(url);
-            if (supported) {
-                await Linking.openURL(url);
-            }
-        } catch (error) {
-            if (__DEV__) console.error("Error opening Rate Us:", error);
-        }
+    const handleRateUs = () => {
+        Alert.alert(
+            t("settings.rate_title"),
+            t("settings.rate_message"),
+            [{ text: "OK", onPress: () => Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success) }]
+        );
     };
 
     const handleSupport = async () => {
-        const url = "mailto:soporte@hymsoft.com.ar?subject=CalixAuth Support";
+        const url = "mailto:hymsoft@gmail.com?subject=CalixAuth Support";
         try {
             await Linking.openURL(url);
         } catch (error) {
@@ -136,7 +130,9 @@ export const SettingsMenu = () => {
                                 ? t("common.language")
                                 : viewMode === "themes"
                                     ? t("settings.theme")
-                                    : t("settings.title")}
+                                    : viewMode === "about"
+                                        ? t("settings.about")
+                                        : t("settings.title")}
                         </Text>
 
                         {viewMode === "main" ? (
@@ -194,6 +190,49 @@ export const SettingsMenu = () => {
                                 <View style={styles.versionContainer}>
                                     <Text style={[styles.versionText, { color: colors.text.muted }]}>V{appVersion}</Text>
                                 </View>
+
+                                <TouchableOpacity
+                                    style={styles.aboutLink}
+                                    onPress={() => setViewMode("about")}
+                                >
+                                    <Text style={[styles.aboutLinkText, { color: colors.text.muted }]}>
+                                        {t("settings.about")}
+                                    </Text>
+                                </TouchableOpacity>
+                            </View>
+                        ) : viewMode === "about" ? (
+                            <View style={styles.aboutContainer}>
+                                <View style={styles.logoContainer}>
+                                    <Image
+                                        source={require("../../assets/icon.png")}
+                                        style={styles.aboutLogo}
+                                        resizeMode="contain"
+                                    />
+                                </View>
+
+                                <Text style={[styles.appName, { color: colors.text.main }]}>CalixAuth</Text>
+                                <Text style={[styles.appVersion, { color: colors.text.muted }]}>v{appVersion}</Text>
+
+                                <View style={styles.aboutInfo}>
+                                    <Text style={[styles.aboutLabel, { color: colors.text.muted }]}>
+                                        {t("about.developed_by")}
+                                    </Text>
+                                    <Text style={[styles.aboutValue, { color: colors.primary }]}>HyM Soft</Text>
+                                    <Text style={[styles.aboutValue, { color: colors.text.main }]}>Hugo Antonio Segura</Text>
+                                </View>
+
+                                <View style={styles.aboutInfo}>
+                                    <Text style={[styles.aboutLabel, { color: colors.text.muted }]}>
+                                        {t("about.purpose")}
+                                    </Text>
+                                    <Text style={[styles.aboutValue, { color: colors.text.main, fontStyle: 'italic' }]}>
+                                        "{t("about.purpose_desc")}"
+                                    </Text>
+                                </View>
+
+                                <Text style={[styles.copyright, { color: colors.text.muted }]}>
+                                    © 2026 HyM Soft. {t("about.rights")}
+                                </Text>
                             </View>
                         ) : viewMode === "languages" ? (
                             <View style={styles.menuList}>
@@ -383,4 +422,61 @@ const styles = StyleSheet.create({
     flag: { fontSize: 24 },
     text: { fontSize: 16, fontWeight: "500", flex: 1 },
     check: { fontSize: 16, fontWeight: "bold" },
+
+    // Estilos para Acerca de
+    aboutLink: {
+        marginTop: 10,
+        alignItems: "center",
+        padding: 10,
+    },
+    aboutLinkText: {
+        fontSize: 14,
+        textDecorationLine: "underline",
+    },
+    aboutContainer: {
+        alignItems: "center",
+        paddingVertical: 10,
+        gap: 20,
+    },
+    logoContainer: {
+        width: 100,
+        height: 100,
+        borderRadius: 20,
+        backgroundColor: "rgba(0,0,0,0.05)",
+        alignItems: "center",
+        justifyContent: "center",
+        marginBottom: 10,
+        overflow: "hidden",
+    },
+    aboutLogo: {
+        width: "100%",
+        height: "100%",
+    },
+    appName: {
+        fontSize: 24,
+        fontWeight: "bold",
+        marginBottom: -10,
+    },
+    appVersion: {
+        fontSize: 14,
+        fontFamily: "monospace",
+    },
+    aboutInfo: {
+        alignItems: "center",
+        gap: 4,
+    },
+    aboutLabel: {
+        fontSize: 12,
+        fontWeight: "600",
+        textTransform: "uppercase",
+        opacity: 0.7,
+    },
+    aboutValue: {
+        fontSize: 16,
+        fontWeight: "500",
+    },
+    copyright: {
+        fontSize: 12,
+        marginTop: 20,
+    },
 });
