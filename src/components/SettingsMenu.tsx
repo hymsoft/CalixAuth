@@ -231,13 +231,21 @@ export const SettingsMenu = () => {
                                 </View>
 
                                 <View style={styles.legalLinksContainer}>
+<<<<<<< HEAD
                                     <TouchableOpacity onPress={() => Linking.openURL("https://github.com/hymsoft/CalixAuth/blob/main/PRIVACY.md")}>
+=======
+                                    <TouchableOpacity onPress={() => Linking.openURL("https://github.com/hymsoft")}>
+>>>>>>> 9daaa34e8f685c1f610468973ef8e3e4736bc7d7
                                         <Text style={[styles.legalLink, { color: colors.primary }]}>
                                             {t("about.privacy_policy")}
                                         </Text>
                                     </TouchableOpacity>
                                     <Text style={{ color: colors.text.muted }}> • </Text>
+<<<<<<< HEAD
                                     <TouchableOpacity onPress={() => Linking.openURL("https://github.com/hymsoft/CalixAuth/blob/main/TERMS.md")}>
+=======
+                                    <TouchableOpacity onPress={() => Linking.openURL("https://github.com/hymsoft")}>
+>>>>>>> 9daaa34e8f685c1f610468973ef8e3e4736bc7d7
                                         <Text style={[styles.legalLink, { color: colors.primary }]}>
                                             {t("about.terms_of_use")}
                                         </Text>
