@@ -36,7 +36,9 @@
         "developed_by": "Developed by",
         "purpose": "Philosophy",
         "purpose_desc": "Use and Forget",
-        "rights": "All rights reserved"
+        "rights": "All rights reserved",
+        "privacy_policy": "Privacy Policy",
+        "terms_of_use": "Terms of Use"
     },
     "history": {
         "empty": "Your generated passwords will appear here.",

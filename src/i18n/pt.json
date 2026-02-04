@@ -36,7 +36,9 @@
         "developed_by": "Desenvolvido por",
         "purpose": "Filosofia",
         "purpose_desc": "Usar e Esquecer",
-        "rights": "Todos os direitos reservados"
+        "rights": "Todos os direitos reservados",
+        "privacy_policy": "Política de Privacidade",
+        "terms_of_use": "Termos de Uso"
     },
     "history": {
         "empty": "Suas senhas geradas aparecerão aqui.",
