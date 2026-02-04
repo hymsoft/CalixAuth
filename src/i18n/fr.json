@@ -36,7 +36,9 @@
         "developed_by": "Développé par",
         "purpose": "Philosophie",
         "purpose_desc": "Utiliser et Oublier",
-        "rights": "Tous droits réservés"
+        "rights": "Tous droits réservés",
+        "privacy_policy": "Politique de Confidentialité",
+        "terms_of_use": "Conditions d'Utilisation"
     },
     "history": {
         "empty": "Vos mots de passe générés apparaîtront ici.",

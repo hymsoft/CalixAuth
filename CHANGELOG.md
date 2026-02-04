@@ -8,6 +8,8 @@
 ### Added
 - **Repositorio Oficial**: Transición al flujo de producción oficial bajo la versión 1.0.0.
 - **Internacionalización (i18n)**: Soporte completo para etiquetas de slider (min/max) en todos los idiomas (ES, EN, FR, PT).
+- **Sección 'Acerca de...'**: Nueva vista con información de branding, versión, autoría (HyM Soft) y propósito.
+- **Cumplimiento Legal**: Incorporación de `PRIVACY.md`, `TERMS.md` y enlaces directos desde la interfaz.
 
 ### Fixed
 - **UI/UX (Pulido Final)**:

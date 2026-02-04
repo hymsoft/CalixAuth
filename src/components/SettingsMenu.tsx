@@ -230,6 +230,20 @@ export const SettingsMenu = () => {
                                     </Text>
                                 </View>
 
+                                <View style={styles.legalLinksContainer}>
+                                    <TouchableOpacity onPress={() => Linking.openURL("https://github.com/hymsoft/CalixAuth/blob/main/PRIVACY.md")}>
+                                        <Text style={[styles.legalLink, { color: colors.primary }]}>
+                                            {t("about.privacy_policy")}
+                                        </Text>
+                                    </TouchableOpacity>
+                                    <Text style={{ color: colors.text.muted }}> • </Text>
+                                    <TouchableOpacity onPress={() => Linking.openURL("https://github.com/hymsoft/CalixAuth/blob/main/TERMS.md")}>
+                                        <Text style={[styles.legalLink, { color: colors.primary }]}>
+                                            {t("about.terms_of_use")}
+                                        </Text>
+                                    </TouchableOpacity>
+                                </View>
+
                                 <Text style={[styles.copyright, { color: colors.text.muted }]}>
                                     © 2026 HyM Soft. {t("about.rights")}
                                 </Text>
@@ -478,5 +492,14 @@ const styles = StyleSheet.create({
     copyright: {
         fontSize: 12,
         marginTop: 20,
+    },
+    legalLinksContainer: {
+        flexDirection: "row",
+        marginTop: 10,
+        alignItems: "center",
+    },
+    legalLink: {
+        fontSize: 12,
+        textDecorationLine: "underline",
     },
 });
