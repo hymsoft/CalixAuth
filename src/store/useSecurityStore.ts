@@ -2,7 +2,7 @@ import { create } from "zustand";
 import * as Crypto from "expo-crypto";
 import { clearClipboard } from "../utils/clipboard";
 
-interface PasswordEntry {
+export interface PasswordEntry {
   id: string;
   value: string;
   generatedAt: number;

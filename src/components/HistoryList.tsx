@@ -27,10 +27,12 @@ interface HistoryListProps {
 const HistoryItem = ({
   item,
   onPress,
+  isCopied,
   t,
 }: {
   item: PasswordEntry;
   onPress: () => void;
+  isCopied: boolean;
   t: (key: string) => string;
 }) => {
   const isPressed = useSharedValue(0);
@@ -57,17 +59,23 @@ const HistoryItem = ({
       entering={ZoomIn.duration(300)}
       exiting={ZoomOutRight.duration(300)}
       layout={LinearTransition}
-      style={[styles.historyItem, animatedStyle]}
+      style={[
+        styles.historyItem,
+        animatedStyle,
+        isCopied && styles.historyItemCopied,
+      ]}
     >
       <Text style={styles.historyItemText}>{item.value}</Text>
 
       <Pressable
-        style={styles.copyButton}
+        style={[styles.copyButton, isCopied && styles.copyButtonCopied]}
         onPress={onPress}
         onPressIn={handlePressIn}
         onPressOut={handlePressOut}
       >
-        <Text style={styles.copyButtonText}>{t("common.copy")}</Text>
+        <Text style={styles.copyButtonText}>
+          {isCopied ? "✓" : t("common.copy")}
+        </Text>
       </Pressable>
     </Animated.View>
   );
@@ -75,7 +83,7 @@ const HistoryItem = ({
 
 export const HistoryList = ({ onCopy }: HistoryListProps) => {
   const { t } = useTranslation();
-  const { history, clearHistory } = useSecurityStore();
+  const { history, clearHistory, lastCopiedId } = useSecurityStore();
 
   const handleClearHistory = () => {
     if (history.length === 0) return;
@@ -102,6 +110,7 @@ export const HistoryList = ({ onCopy }: HistoryListProps) => {
         data={history}
         keyExtractor={(item) => item.id}
         style={styles.historyList}
+        contentContainerStyle={styles.listContent}
         ListEmptyComponent={
           <View style={styles.emptyContainer}>
             <Text style={styles.emptyText}>{t("history.empty")}</Text>
@@ -110,6 +119,7 @@ export const HistoryList = ({ onCopy }: HistoryListProps) => {
         renderItem={({ item }) => (
           <HistoryItem
             item={item}
+            isCopied={item.id === lastCopiedId}
             t={t}
             onPress={() => {
               onCopy(item.value, item.id);
@@ -138,6 +148,10 @@ const styles = StyleSheet.create({
   historyList: {
     width: "90%",
     marginTop: 15,
+    marginBottom: 50,
+  },
+  listContent: {
+    paddingBottom: 100,
   },
   historyItem: {
     flexDirection: "row",
@@ -157,11 +171,19 @@ const styles = StyleSheet.create({
     flex: 1,
     marginRight: 10,
   },
+  historyItemCopied: {
+    borderColor: Colors.primary,
+    borderWidth: 1,
+    borderLeftWidth: 3,
+  },
   copyButton: {
     backgroundColor: Colors.primary,
     paddingVertical: 6,
     paddingHorizontal: 12,
     borderRadius: 6,
+  },
+  copyButtonCopied: {
+    backgroundColor: "#4CAF50", // Standard Green for better visibility
   },
   copyButtonText: {
     color: "#FFFFFF",

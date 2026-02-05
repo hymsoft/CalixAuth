@@ -16,6 +16,9 @@
   - API `AppState` reclasificada como no deprecated (uso válido en React Native)
   - Sesgo criptográfico reclasificado como bajo riesgo (CSPRNG implementado correctamente)
 
+### Added
+- **UI/UX**: Nuevo indicador visual en el historial para identificar la contraseña copiada actualmente.
+
 ## [1.0.0] - 2026-02-03
 
 > [!IMPORTANT]

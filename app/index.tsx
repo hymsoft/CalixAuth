@@ -96,6 +96,7 @@ export default function Dashboard() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    width: "100%", // Asegura que ocupe todo el ancho
     alignItems: "center",
     paddingTop: 50,
   },

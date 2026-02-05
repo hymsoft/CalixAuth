@@ -17,5 +17,5 @@ Se utilizará la paleta **Azul Cronos** de HyM Soft. Para garantizar la compatib
 * **Adaptabilidad:** La app detectará automáticamente `useColorScheme()` del sistema operativo.
 * **Jerarquía:** El botón "Generar" debe ocupar al menos el **20% de la pantalla** o tener un peso visual dominante gracias al color `primary` y sombras sutiles.
 * **Feedback:**
-  * **Visual:** Micro-animación de "presión" al tocar botones.
+  * **Visual:** Micro-animación de "presión" al tocar botones y **cambio de estado** (check/borde) al copiar ítems del historial.
   * **Háptico:** Vibración sutil (`expo-haptics`) al generar clave y al copiar al portapapeles.

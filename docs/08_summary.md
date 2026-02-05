@@ -83,6 +83,7 @@ A diferencia de los gestores tradicionales que sincronizan todo en la nube, Cali
 
 - **Feedback Visual:** Micro-animación de "presión" al tocar botones
 - **Feedback Háptico:** Vibración sutil (`expo-haptics`) al generar clave y copiar
+- **Indicadores de Estado:** Resaltado visual del elemento copiado en el historial
 
 ---
 
