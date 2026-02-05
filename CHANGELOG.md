@@ -1,17 +1,35 @@
 # Changelog - CalixAuth
 
+## [1.0.0] - 2026-02-05
+
+> [!IMPORTANT]
+> **Correcciones de Auditoría**: Actualización de mantenimiento con correcciones menores y limpieza de documentación técnica.
+
+### Fixed
+
+- **Resolución de Merge Conflict**: Corregido conflicto en `src/components/SettingsMenu.tsx`
+- **Documentación de Seguridad**: Actualizado threshold de limpieza en `docs/05_security.md` (ajuste técnico de parámetros)
+- **Documentación de Arquitectura**: Marcados features pendientes `/types` y `useInAppPurchase` como pendiente en `docs/02_architecture.md`
+- **Documentación de Requisitos**: Actualizado límite de historial de 5 a 10 entradas en `docs/03_requirements.md`
+- **Nueva Auditoría**: Creado documento de auditoría detallada en `docs/15_auditoria.md`
+- **Falsos Positivos Corregidos**:
+  - API `AppState` reclasificada como no deprecated (uso válido en React Native)
+  - Sesgo criptográfico reclasificado como bajo riesgo (CSPRNG implementado correctamente)
+
 ## [1.0.0] - 2026-02-03
 
 > [!IMPORTANT]
 > **Lanzamiento de Producción**: Ingreso oficial al repositorio de producción. Esta versión consolida todas las mejoras de la fase de auditoría y pulido final.
 
 ### Added
+
 - **Repositorio Oficial**: Transición al flujo de producción oficial bajo la versión 1.0.0.
 - **Internacionalización (i18n)**: Soporte completo para etiquetas de slider (min/max) en todos los idiomas (ES, EN, FR, PT).
 - **Sección 'Acerca de...'**: Nueva vista con información de branding, versión, autoría (HyM Soft) y propósito.
 - **Cumplimiento Legal**: Incorporación de `PRIVACY.md`, `TERMS.md` y enlaces directos desde la interfaz.
 
 ### Fixed
+
 - **UI/UX (Pulido Final)**:
   - Mejora de visibilidad de la versión en el menú de ajustes con color `muted` para Modo Oscuro.
   - Agregadas etiquetas visuales "min. 8" y "max. 32" al slider de longitud para mayor claridad.
@@ -23,6 +41,7 @@
 > **Cierre de Desarrollo Principal**: Esta versión marca la finalización de la lógica core, infraestructura de seguridad y auditoría técnica del proyecto.
 
 ### Fixed
+
 - **Directivas de Desarrollo**: Auditoría completa de cumplimiento del Punto 3 de las directivas de Hymsoft.
   - Agregados docstrings reglamentarios (Author, Company, Year, Parámetros y Retorno) en español a todos los componentes y utilidades nuevos.
   - Estandarización de metadatos en `ErrorBoundary`, `Toast`, `clipboard`, `crypto` y Stores de Zustand.
@@ -32,6 +51,7 @@
 ## [1.0.58] - 2026-02-03
 
 ### Fixed
+
 - **Clipboard UX**: Optimización drástica del borrado del portapapeles.
   - El borrado ahora usa un espacio en blanco (`" "`) para asegurar la sobrescritura efectiva en todos los dispositivos Android.
   - Implementación de lógica anti-duplicidad de notificaciones: en Android 13+ (API 33) se prioriza la alerta del sistema sobre el toast de la app.
@@ -43,7 +63,7 @@
 
 ### Added
 
-- **Infraestructura de Calidad**: 
+- **Infraestructura de Calidad**:
   - Configuración inicial de Jest para pruebas unitarias (v29 estable).
   - Creación de `jest.config.js` y `jest-setup.ts` con mocks para `expo-crypto`, `AsyncStorage` e `i18n`.
   - Suite de 13 tests unitarios cubriendo `crypto.ts`, `useSecurityStore.ts` (TTL, historial) y `useConfigStore.ts` (validación de seguridad).

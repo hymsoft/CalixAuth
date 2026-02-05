@@ -18,11 +18,11 @@
 ├── /src
 │   ├── /components      # UI Kit (Botones, Sliders, Cards, FeedbackHaptic)
 │   ├── /constants       # Paletas de colores, Configuración Global
-│   ├── /hooks           # usePasswordGenerator, useInAppPurchase
+│   ├── /hooks           # usePasswordGenerator, useInAppPurchase (EN PAUSA - Fase 6 pausada)
 │   ├── /i18n            # Configuración y diccionarios (ES, EN, FR)
 │   ├── /store           # Stores de Zustand (authStore, settingsStore)
 │   ├── /utils           # Helpers de criptografía y formateo
-│   └── /types           # Definiciones de TypeScript compartidas
+│   └── /types           # Definiciones de TypeScript compartidas (PENDIENTE)
 ├── /app                 # Expo Router
 │   ├── _layout.tsx      # Provider wrappers (I18n, Theme)
 │   └── index.tsx        # Pantalla Principal (Dashboard)
